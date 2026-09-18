@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://3jcskl3o8x56"]
+
+[node name="stage" type="Node2D" unique_id=1292493724]
+
+[node name="Background" type="Node2D" parent="." unique_id=229953184]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=2052529311]
