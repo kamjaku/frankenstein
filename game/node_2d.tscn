@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://c4csj6xx0p5sl"]
 
-[node name="Node2D" type="Node2D" unique_id=552407210]
+[ext_resource type="PackedScene" uid="uid://3jcskl3o8x56" path="res://game/scences/stage.tscn" id="1_nirjb"]
+
+[node name="world" type="Node2D" unique_id=552407210]
+
+[node name="stage" parent="." unique_id=1292493724 instance=ExtResource("1_nirjb")]
