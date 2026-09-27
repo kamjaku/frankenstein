@@ -1,11 +1,34 @@
 [gd_scene format=3 uid="uid://3jcskl3o8x56"]
 
-[ext_resource type="Texture2D" uid="uid://b8kkidnjpwk6a" path="res://game/assets/assets/art/backgrounds/street-background.png" id="1_fb3jf"]
+[ext_resource type="Texture2D" uid="uid://bv0xkycnw6i5d" path="res://characterss/background ahh alley way uncomp.png" id="1_fb3jf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
+size = Vector2(412, 21)
 
 [node name="stage" type="Node2D" unique_id=1292493724]
 
 [node name="Background" type="Node2D" parent="." unique_id=229953184]
+use_parent_material = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=2052529311]
+[node name="BackgroundAhhAlleyWayUncomp" type="Sprite2D" parent="Background" unique_id=114135402]
+position = Vector2(225.75002, 18.249992)
+scale = Vector2(0.57350004, 0.5335937)
 texture = ExtResource("1_fb3jf")
-centered = false
+
+[node name="world colliders" type="Node2D" parent="." unique_id=483614001]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world colliders" unique_id=884660181]
+position = Vector2(2, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world colliders/StaticBody2D" unique_id=1791618396]
+position = Vector2(146, -43)
+shape = SubResource("RectangleShape2D_4kxuq")
+debug_color = Color(0.84565896, 0.34262335, 0.4279691, 0.41960785)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="world colliders" unique_id=678868943]
+position = Vector2(3, 74)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world colliders/StaticBody2D2" unique_id=943340143]
+position = Vector2(140, 126)
+shape = SubResource("RectangleShape2D_4kxuq")

@@ -1,7 +1,46 @@
 [gd_scene format=3 uid="uid://c4csj6xx0p5sl"]
 
+[ext_resource type="Script" uid="uid://hyr2607rpm5h" path="res://game/camera.gd" id="1_7bydk"]
 [ext_resource type="PackedScene" uid="uid://3jcskl3o8x56" path="res://game/scences/stage.tscn" id="1_nirjb"]
+[ext_resource type="PackedScene" uid="uid://n7x0uxy5nfp3" path="res://characterss/player.tscn" id="2_0kgwv"]
+[ext_resource type="Script" uid="uid://tkj5pjtpdisq" path="res://game/camera_smth_smth.gd" id="4_br2dp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
+size = Vector2(6, 64)
 
 [node name="world" type="Node2D" unique_id=552407210]
+script = ExtResource("1_7bydk")
 
 [node name="stage" parent="." unique_id=1292493724 instance=ExtResource("1_nirjb")]
+
+[node name="player" parent="." unique_id=1694788704 instance=ExtResource("2_0kgwv")]
+position = Vector2(71, 46)
+collision_layer = 1
+collision_mask = 1
+
+[node name="camera" type="Camera2D" parent="." unique_id=46491928]
+position = Vector2(50, 32)
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 100
+limit_bottom = 64
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = ExtResource("4_br2dp")
+
+[node name="invisiblewalls" type="Node2D" parent="camera" unique_id=1868483431]
+position = Vector2(-50, -32)
+
+[node name="leftwall" type="StaticBody2D" parent="camera/invisiblewalls" unique_id=1486796275]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camera/invisiblewalls/leftwall" unique_id=1044187066]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_4kxuq")
+
+[node name="rightwall" type="StaticBody2D" parent="camera" unique_id=1437312248]
+position = Vector2(50, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camera/rightwall" unique_id=701068127]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_4kxuq")

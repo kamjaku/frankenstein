@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://n7x0uxy5nfp3"]
+
+[ext_resource type="PackedScene" uid="uid://c87i3asesvnxm" path="res://characterss/character.tscn" id="1_mce3q"]
+
+[node name="player" unique_id=1694788704 instance=ExtResource("1_mce3q")]
+collision_layer = 2
+collision_mask = 9
+
+[node name="shadowsprite" parent="." index="0" unique_id=1093905772]
+position = Vector2(-53.999996, -109)
+scale = Vector2(0.96107775, 1.1134025)
+
+[node name="charactersprite" parent="." index="1" unique_id=1289986683]
+position = Vector2(13.250002, -54.499992)
+scale = Vector2(1.0100001, 1.0333332)
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1807642658]
+position = Vector2(14, -46)

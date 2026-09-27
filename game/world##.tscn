@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b58tmsgdp1mce"]
+
+[ext_resource type="PackedScene" uid="uid://c4csj6xx0p5sl" path="res://game/node_2d.tscn" id="1_4r43x"]
+[ext_resource type="PackedScene" uid="uid://baikuibkj628b" path="res://props/barrel.tscn" id="2_nhlgi"]
+
+[node name="world" unique_id=552407210 instance=ExtResource("1_4r43x")]
+
+[node name="barrel" parent="." index="3" unique_id=887553332 instance=ExtResource("2_nhlgi")]
+position = Vector2(153, 12)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dk7j8ts4e74eh"]
+
+[ext_resource type="PackedScene" uid="uid://3jcskl3o8x56" path="res://game/scences/stage.tscn" id="1_mlv0g"]
+[ext_resource type="PackedScene" uid="uid://n7x0uxy5nfp3" path="res://characterss/player.tscn" id="2_jgqqw"]
+[ext_resource type="Script" uid="uid://hyr2607rpm5h" path="res://game/camera.gd" id="3_fpd2f"]
+[ext_resource type="PackedScene" uid="uid://baikuibkj628b" path="res://props/barrel.tscn" id="3_jgqqw"]
+
+[node name="world#" type="Node2D" unique_id=1574721916]
+
+[node name="stage" parent="." unique_id=1292493724 instance=ExtResource("1_mlv0g")]
+position = Vector2(59, 148)
+
+[node name="actorscontainer" type="Node2D" parent="." unique_id=213777342]
+y_sort_enabled = true
+
+[node name="barrel" parent="actorscontainer" unique_id=887553332 instance=ExtResource("3_jgqqw")]
+position = Vector2(228, 223)
+
+[node name="player" parent="actorscontainer" unique_id=1694788704 instance=ExtResource("2_jgqqw")]
+position = Vector2(144, 253)
+
+[node name="Camera2D" type="Camera2D" parent="actorscontainer/player" unique_id=303681932]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = ExtResource("3_fpd2f")
