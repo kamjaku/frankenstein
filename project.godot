@@ -75,6 +75,9 @@ right={
 2d_physics/layer_2="player"
 2d_physics/layer_3="enemy"
 2d_physics/layer_4="destructables"
+2d_physics/layer_5="playerdamagereciever"
+2d_physics/layer_6="enemydamagereciever"
+2d_physics/layer_7="destructablesdamagereciever"
 
 [physics]
 

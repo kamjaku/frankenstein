@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c87i3asesvnxm" path="res://characterss/character.tscn" id="1_mce3q"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qx3t"]
+size = Vector2(11, 36.5)
+
 [node name="player" unique_id=1694788704 instance=ExtResource("1_mce3q")]
 collision_layer = 2
 collision_mask = 9
@@ -13,6 +16,18 @@ scale = Vector2(0.96107775, 1.1134025)
 [node name="charactersprite" parent="." index="1" unique_id=1289986683]
 position = Vector2(13.250002, -54.499992)
 scale = Vector2(1.0100001, 1.0333332)
+frame = 0
+frame_progress = 0.0
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=1807642658]
-position = Vector2(14, -46)
+position = Vector2(12, -30)
+
+[node name="damage_emitter" parent="." index="4" unique_id=1992464899]
+collision_mask = 96
+monitorable = true
+
+[node name="CollisionShape2D" parent="damage_emitter" index="0" unique_id=370256610]
+position = Vector2(-76.5, 18.250004)
+shape = SubResource("RectangleShape2D_6qx3t")
+
+[editable path="damage_emitter"]

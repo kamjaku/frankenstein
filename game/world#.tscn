@@ -19,7 +19,7 @@ position = Vector2(228, 223)
 [node name="player" parent="actorscontainer" unique_id=1694788704 instance=ExtResource("2_jgqqw")]
 position = Vector2(144, 253)
 
-[node name="Camera2D" type="Camera2D" parent="actorscontainer/player" unique_id=303681932]
+[node name="camera" type="Camera2D" parent="actorscontainer/player" unique_id=303681932]
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 script = ExtResource("3_fpd2f")
