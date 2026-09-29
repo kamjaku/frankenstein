@@ -101,8 +101,8 @@ func _on_animation_finished() -> void:
 
 # FIXED: Standardised naming with the signal connection above
 
-func on_damage_(_damage_reciever: Area2D) -> void:
-	_damage_reciever.get_parent().get_damage
+func on_damage_(_damage_reciever: damagereciever) -> void:
+	_damage_reciever.damage_recieved.emit(damage)
 	print("damage")
 
 # ok hit and hurt box time

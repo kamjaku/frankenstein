@@ -1,11 +1,12 @@
+
 extends StaticBody2D
 
+@onready var damage_reciever = $damage_reciever
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	damage_reciever.damage_recieved.connect(on_recieve_damage.bind())
+	
+func on_recieve_damage(damage : int ) -> void: 
+	print(damage)
+	queue_free()
