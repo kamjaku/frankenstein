@@ -78,6 +78,8 @@ right={
 2d_physics/layer_5="playerdamagereciever"
 2d_physics/layer_6="enemydamagereciever"
 2d_physics/layer_7="destructablesdamagereciever"
+2d_physics/layer_8="hurtbox"
+2d_physics/layer_9="hitbox"
 
 [physics]
 

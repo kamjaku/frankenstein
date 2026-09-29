@@ -31,9 +31,13 @@ shape = SubResource("CapsuleShape2D_4kxuq")
 
 [node name="damage_reciever" parent="." unique_id=1666245794 instance=ExtResource("2_1nefx")]
 collision_layer = 64
+collision_mask = 2
+priority = 2
 
 [node name="CollisionShape2D" parent="damage_reciever" index="0" unique_id=1736682795]
 position = Vector2(9, -40.75)
 shape = SubResource("RectangleShape2D_mce3q")
+
+[connection signal="damage_recieved" from="damage_reciever" to="." method="on_recieve_damage"]
 
 [editable path="damage_reciever"]
